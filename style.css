@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor {
+    background-color: #95c11e;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 150;
+}
+
+#cblur {
+    background-color: #96c11ebe;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(60px);
+    z-index: 99;
+}
+
+
+#nav {
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 150px;
+    padding: 0 150px;
+    width: 100%;
+    /* background-color: red; */
+    gap: 50px;
+    position: fixed;
+    z-index: 101;
+}
+
+#nav img {
+    height: 75px;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37)
+}
+
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    left: -6px;
+    top: -6px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+}
+
+#page1 h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#page1 p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    text-transform: uppercase;
+    /* font-weight: 900; */
+    -webkit-text-stroke: #95c11e 3px;
+    color: black;
+    transition: all linear 0.3s;
+    margin-left: 20px;
+}
+
+#scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    position: relative;
+    z-index: 100;
+}
+
+#about-us img {
+    height: 50%;
+    width: 16%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 54px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 100;
+}
+
+.card {
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    /* overflow: hidden; */
+}
+
+#card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 50px;
+    padding-top: 30%;
+    opacity: 0;
+    border-radius: 20px;
+    transition: all ease 0.4s;
+    /* perspective: 5000px; */
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* white-space: nowrap; */
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    color: #000;
+    font-size: 18px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+#green-div {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #80ffdb, #4f772d);
+    z-index: 100;
+}
+
+#green-div h4 {
+    color: #000;
+    width: 50%;
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    /* font-weight: 800; */
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 13%;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #354f52, #c9ada7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3>p {
+    font-size: 45px;
+    width: 40%;
+    line-height: 58px;
+    text-align: center;
+}
+
+#page3 img {
+    position: absolute;
+    height: 60px;
+}
+
+#page3 #colon1 {
+    left: 23%;
+    top: 28%;
+}
+
+#page3 #colon2 {
+    right: 23%;
+    bottom: 28%;
+}
+
+
+#page4 {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    background-color: #c9ada7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+
+.elem {
+    height: 60%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.elem h2 {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 101; */
+    font-size: 35px;
+    /* width: 26%; */
+    font-weight: 800;
+    color: #000;
+    position: absolute;
+    z-index: 100;
+    transition: all ease 0.5s;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+}
+
+.elem:hover h2 {
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img {
+    scale: 1;
+}
+
+#page4 h1 {
+    font-size: 6vw;
+    position: absolute;
+    top: 0;
+    color: #4ea8de;
+    -webkit-text-stroke: 2px #7400b8;
+    /* text-align: center; */
+}
+
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #c9ada7, #9c0d38);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13vw;
+    padding: 0 100px;
+}
+
+#footer>img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+#f1 img {
+    height: 100px;
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+}
+
+#f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+#f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
