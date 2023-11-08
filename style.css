@@ -10,6 +10,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    /* perspective: 5000px; */
 }
 
 #cursor {
@@ -211,8 +212,8 @@ video {
     align-items: center;
     justify-content: center;
     gap: 70px;
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    /* background-position: center; */
     position: relative;
     z-index: 100;
 }
@@ -222,7 +223,11 @@ video {
     width: 24%;
     /* background-color: blue; */
     border-radius: 20px;
-    /* overflow: hidden; */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: all ease 0.4s;
+    /* transform-style: preserve-3d; */
 }
 
 #card1 {
@@ -239,23 +244,27 @@ video {
 
 
 .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     background-color: #95c11e;
-    padding: 50px;
-    padding-top: 30%;
+    padding: 50px 25px;
+    /* padding-top: 30%; */
     opacity: 0;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: all ease 0.4s;
     /* perspective: 5000px; */
 }
 
 .overlay h4 {
     color: #000;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: 700;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     margin-bottom: 20px;
 }
 
